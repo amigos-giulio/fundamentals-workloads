@@ -25,8 +25,8 @@ phases:
       properties:
         approvalStateType: USER_GROUP
         timeoutMillis: 86400000
-        userGroups:
-        - ihdnVlgCRMyU3DvdDYsB9A
+        userGroupNames:
+        - Account Administrator
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify

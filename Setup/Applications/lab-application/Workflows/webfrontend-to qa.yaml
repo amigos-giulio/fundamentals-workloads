@@ -14,8 +14,8 @@ notificationRules:
   executionScope: WORKFLOW
   notificationGroupAsExpression: false
   userGroupAsExpression: false
-  userGroupIds:
-  - ihdnVlgCRMyU3DvdDYsB9A
+  userGroupNames:
+  - Account Administrator
 phases:
 - type: KUBERNETES
   computeProviderName: lab-cluster
@@ -40,8 +40,8 @@ phases:
       properties:
         approvalStateType: USER_GROUP
         timeoutMillis: 86400000
-        userGroups:
-        - ihdnVlgCRMyU3DvdDYsB9A
+        userGroupNames:
+        - Account Administrator
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Verify
@@ -55,17 +55,17 @@ phases:
         templateVariables: null
         templateVersion: null
         timeoutMillis: 86400000
-        userGroups:
-        - d21ngRd2QFSHJkFXMNMs6g
-        - ihdnVlgCRMyU3DvdDYsB9A
-        - uuRbXCjsTtav6QT2fvV-0g
+        userGroupNames:
+        - Production Support
+        - Account Administrator
+        - Non-Production Support
     - type: APPROVAL
       name: Approval_2
       properties:
         approvalStateType: USER_GROUP
         timeoutMillis: 86400000
-        userGroups:
-        - ihdnVlgCRMyU3DvdDYsB9A
+        userGroupNames:
+        - Account Administrator
     stepsInParallel: false
   - type: K8S_PHASE_STEP
     name: Wrap Up
